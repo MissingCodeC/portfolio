@@ -4,36 +4,67 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="icon" href="data:," />
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/icon.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/icon.png"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
         />
         <title>Noa's</title>
     </head>
 
     <body>
         <header class="main-header">
-            <a class="nav-icon" href="/"
-                ><img src="../assets/icon.png" alt="my logo"
-            /></a>
-            <nav>
-                <ul>
-                    <li>main</li>
-                    <li>projects</li>
-                    <li>about</li>
-                    <li>contact</li>
+            <nav class="main-nav">
+                <a class="main-nav__brand" href="/">
+                    <img src="../assets/icon.png" alt="my logo" />
+                </a>
+                <ul class="main-nav__items">
+                    <li class="main-nav__item main-nav__item--active">
+                        <a class="main-nav__link" href="#home">Home</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#about">About</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                alias officia pariatur voluptatibus assumenda cum ut doloribus,
-                atque illo! Sunt corrupti, illo enim deserunt maiores vitae
-                error perspiciatis beatae similique!
-            </p>
+            <section class="hero">
+                <div class="hero-container">
+                    <div class="hero-container__left">
+                        <h1>Web <span class="highlighted">Developer</span></h1>
+                        <p>
+                            Just a simple electrical engineering student with a passion for software
+                            development
+                        </p>
+                    </div>
+                    <div class="hero-container__right">
+                        <h1>Web <span class="highlighted">Developer</span></h1>
+                        <p>
+                            Just a simple electrical engineering student with a passion for software
+                            development
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </section>
+            <section class="about"></section>
+            <section class="portfolio"></section>
+            <section class="contact"></section>
         </main>
     </body>
 </html>
