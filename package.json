@@ -1,21 +1,26 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "My first attempt at making a personal portfolio",
-  "main": "app.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Noa",
-  "license": "ISC",
-  "devDependencies": {
-    "html-webpack-plugin": "^5.6.3",
-    "ts-loader": "^9.5.2",
-    "typescript": "^5.8.3",
-    "webpack": "^5.99.9",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.1"
-  }
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My first attempt at making a personal portfolio",
+    "main": "app.js",
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build": "webpack --mode production",
+        "build:dev": "webpack --mode development"
+    },
+    "author": "Noa",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^7.1.2",
+        "css-minimizer-webpack-plugin": "^7.0.2",
+        "html-loader": "^5.1.0",
+        "html-webpack-plugin": "^5.6.3",
+        "mini-css-extract-plugin": "^2.9.2",
+        "style-loader": "^4.0.0",
+        "ts-loader": "^9.5.2",
+        "typescript": "^5.8.3",
+        "webpack": "^5.99.9",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.1"
+    }
 }
