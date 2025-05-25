@@ -100,7 +100,7 @@ main {
     z-index: 0;
     position: absolute;
     inset: 0;
-    background: var(--hover-gradient-1);
+    background: var(--turquoise-2);
     opacity: 0;
     border-radius: 4px;
     z-index: -1;
@@ -128,7 +128,7 @@ main {
 }
 
 .secondary-button:hover {
-    background: var(--dark-bg-color);
+    background: rgba(25, 27, 41, 0.9);
     color: var(--light-text-color);
     box-shadow: 0 0 12px rgba(25, 27, 41, 0.75);
 }
@@ -351,10 +351,11 @@ main {
 
 .about-me__buttons a:last-of-type {
     color: var(--light-text-color);
+    background: var(--hover-gradient-2);
 }
 
 .about-me__buttons a::before {
-    background: var(--hover-gradient-2);
+    background: rgb(0, 92, 112);
 }
 
 .stats-overview {
