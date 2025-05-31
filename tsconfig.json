@@ -1,26 +1,52 @@
 {
     "compilerOptions": {
-        /* Language and Environment */
-        "target": "ES5" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-        // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-        // "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
+        // BASIC
+        "target": "ES2022",
+        "module": "ESNext",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "allowJs": true,
+        "checkJs": false,
+        "moduleResolution": "bundler",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@public/*": ["public/*"],
+            "@assets/*": ["assets/*"]
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
 
-        /* Modules */
-        "module": "ES6" /* Specify what module code is generated. */,
-        "rootDir": "./src" /* Specify the root folder within your source files. */,
+        // OUTPUT
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "removeComments": true,
+        "noEmitOnError": true,
 
-        /* JavaScript Support */
-        // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+        // TYPE-CHECKING & CODE-QUALITY
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "noImplicitThis": true,
+        "useUnknownInCatchVariables": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitOverride": true,
 
-        /* Emit */
-        "sourceMap": true /* Create source map files for emitted JavaScript files. */,
-        "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-        // "removeComments": true,                           /* Disable emitting comments. */
-
-        /* Interop Constraints */
-        "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-
-        /* Type Checking */
-        "strict": true /* Enable all strict type-checking options. */
-    }
+        // PERFORMANCE
+        "incremental": true,
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

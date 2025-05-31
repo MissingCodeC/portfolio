@@ -1,19 +1,21 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+// const path = require('path');
 
-module.exports = (env, argv) => ({
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import path from 'path';
+
+export default (env, argv) => ({
     mode: argv.mode || 'development',
     entry: {
         app: './src/app.ts'
     },
     output: {
-        filename:
-            argv.mode === 'production'
-                ? '[name].[contenthash].js'
-                : '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: argv.mode === 'production' ? '[name].[contenthash].js' : '[name].js',
+        path: path.resolve(import.meta.dirname, 'dist'),
         publicPath: '/',
         clean: true
     },
@@ -32,9 +34,7 @@ module.exports = (env, argv) => ({
             {
                 test: /\.css$/,
                 use: [
-                    argv.mode === 'production'
-                        ? MiniCssExtractPlugin.loader
-                        : 'style-loader',
+                    argv.mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
                     'css-loader'
                 ]
             },
@@ -75,7 +75,7 @@ module.exports = (env, argv) => ({
             : {},
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist')
+            directory: path.resolve(import.meta.dirname, 'dist')
         },
         open: true,
         compress: true,
