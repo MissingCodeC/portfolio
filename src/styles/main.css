@@ -268,7 +268,7 @@ main {
 }
 
 .hero-spacer {
-  background-image: url('../assets/hero-section-spacer.svg');
+  background-image: url('/assets/hero-section-spacer.svg');
 }
 
 /* ABOUT SECTION */
@@ -399,5 +399,5 @@ main {
 }
 
 .about-spacer {
-  background-image: url('../assets/about-section-spacer.svg');
+  background-image: url('/assets/about-section-spacer.svg');
 }

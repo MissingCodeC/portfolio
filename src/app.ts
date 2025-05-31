@@ -1,4 +1,4 @@
-import '../public/styles.css';
+import '@styles/main.css';
 
 const navbar = document.querySelector('.main-nav__items')!;
 navbar.addEventListener('click', event => {
